@@ -18,4 +18,4 @@ if ans**2 == x:
 else:
     print(x, "is not a perfect square")
     if neg_flag:
-        print("Just checking...did you mean", -x,"?")
+        print("Just checking...did you mean", -x,"?")#x
