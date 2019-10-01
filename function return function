@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 27 14:06:40 2019
+
+@author: Patrick
+"""
+
+def add(x, y):
+    """
+    x and y : int or float
+    """
+    return x + y
+def multiply(x, y):
+    """
+    x and y: int or float
+    """
+    return x*y
+
+def addOrMultiply(a):
+    """
+    this function retuns a function, to call this function:
+    Option 1:
+    functionThatReturnsAFunction(arguments_for_this_function)
+    (arguments_for_the_function_returned)
+    Option 2:
+    Store returned value in a variable eg determinerFunc
+    then you'd call that variable as a function
+    determineFunc(3,7)
+    a : int or float
+    add if a is great than 5 else return multiply
+    """
+    if a > 5:
+        return add #Not call but return function, no ()
+    else:
+        return multiply
+
+a = 5
+x = addOrMultiply(a)(8,8)
+print(x)
+
+#also instead of using two parenthesis
+#you can store function structure returned on a variable.
+
+determinerFunc = addOrMultiply(a)
+
+print(determinerFunc(8,8))
+
